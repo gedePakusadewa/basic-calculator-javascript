@@ -6,25 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<style>
-			.showImg{
-				display:block;
-			}
-
-			.hideImg{
-				display:none;
-			}
-
-			.img-card-container{
-
-			}
-
-			.container-modal{
-				border:1px solid black;
-				position:absolute;
-				top:50%;
-				left:50%;
-				transform:translate(-50%, -50%);
-			}
 
 			.block-non-number{
 				width:100px;
@@ -89,6 +70,8 @@
 	</body>
 	<script>
 		//lanjut project no 10 di https://jsbeginners.com/javascript-projects-for-beginners/
+		var tesData = document.get
+		lanjut ngetes engken carane nyemak data paling efisien uli elemen di dokumen ketika di click
 
 	</script>
 <html>
