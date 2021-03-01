@@ -71,15 +71,22 @@
 	<script>
 		//lanjut project no 10 di https://jsbeginners.com/javascript-projects-for-beginners/
 
-
-		var fNumber = 0, sNumber = 0;
-		var operator = "";
+		var fNumber = "", sNumber = "", operator = "";
+		var shiftNumber = false;
 
 		function set_Value(data){
 			var tes = data.firstChild;
 			console.log(tes.nodeValue);
+			if(!isNaN(parseInt(tes.nodeValue))){
+				//if(shiftnumber === true){
+					fNumber += tes.nodeValue;
+				//}
+				console.log("tes value: " + fNumber);
+				console.log("Number");
+			}else{
+				console.log('Not Number');
+			}
 		}
 		
-
 	</script>
 <html>
