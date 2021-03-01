@@ -65,22 +65,20 @@
 			<div onclick="set_Value(this)" class="block-number">4</div>
 			<div onclick="set_Value(this)" class="block-number">3</div>
 			<div onclick="set_Value(this)" class="block-number">2</div>
-			<div onclick="set_Value(this)" class="block-number"><span class="tes">1</span></div>
+			<div onclick="set_Value(this)" class="block-number"><span>1</span></div>
 		</div>
 	</body>
 	<script>
 		//lanjut project no 10 di https://jsbeginners.com/javascript-projects-for-beginners/
-		
-		document.addEventListener('DOMContentLoaded', function(err){
-			console.log('its finished');
-		});
+
+
+		var fNumber = 0, sNumber = 0;
+		var operator = "";
 
 		function set_Value(data){
-			var tes = data.children;
-			console.log(tes);
+			var tes = data.firstChild;
+			console.log(tes.nodeValue);
 		}
-
-		cobak alih solusi engken carane htmlcollection length 0
 		
 
 	</script>
