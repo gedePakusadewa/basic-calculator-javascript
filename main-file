@@ -78,15 +78,21 @@
 			var tes = data.firstChild;
 			console.log(tes.nodeValue);
 			if(!isNaN(parseInt(tes.nodeValue))){
-				//if(shiftnumber === true){
+				if(shiftnumber === true){
 					fNumber += tes.nodeValue;
-				//}
-				console.log("tes value: " + fNumber);
+					console.log("tes value fNumber: " + fNumber);
+				}else{
+					sNumber += tes.nodeValue;
+					console.log("test second number:" + sNumber);
+				}				
 				console.log("Number");
 			}else{
+				shiftNumber = true;
 				console.log('Not Number');
 			}
 		}
 		
+benerin error
+
 	</script>
 <html>
