@@ -45,6 +45,14 @@
 				text-align:right;
 			}
 
+			#equal-operator{
+				background-color:green;
+			}
+
+			#delete-all{
+				background-color:red;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -66,6 +74,8 @@
 			<div onclick="set_Value(this)" class="block-number">3</div>
 			<div onclick="set_Value(this)" class="block-number">2</div>
 			<div onclick="set_Value(this)" class="block-number">1</div>
+			<div id="equal-operator" onclick="set_Value(this)" class="block-non-number">=</div>
+			<div id="delete-all" onclick="set_Value(this)" class="block-non-number">C</div>
 		</div>
 	</body>
 	<script>
@@ -86,15 +96,40 @@
 					console.log("test second number: " + sNumber);
 				}				
 				console.log("Number");
+			}else if(tes.nodeValue === "="){
+				set_resultValue(get_OperationValue(fNumber, sNumber, operator));
 			}else{
 				shiftNumber = true;
-				console.log('Not Number');
+				operator = tes.nodeValue;
+				console.log("Operator -> " + operator);
 			}
 		}
 
-		function get_OperationValue(){}
-		
-//benerin error
+		function get_OperationValue(number1, number2, operatorSysmbol){
+			var finalValue = 0;
+			switch(operatorSysmbol){
+				case "*":
+					finalValue = parseInt(number1) * parseInt(number2);
+					break;
+				case "/":
+					finalValue = parseInt(number1) / parseInt(number2);
+					break;
+				case "-":
+					finalValue = parseInt(number1) - parseInt(number2);
+					break;
+				case "+":
+					finalValue = parseInt(number1) + parseInt(number2);
+					break;
+			}
+			return finalValue;
+			//console.log("final result " + finalValue);
+		}
+
+		function set_resultValue(result){
+			document.getElementById("result-calculator").innerHTML = result;
+		}
+
+		lanjut test ada celah sederhana sink
 
 	</script>
 <html>
