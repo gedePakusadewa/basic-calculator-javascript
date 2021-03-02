@@ -52,26 +52,47 @@
 			<p id="result-calculator">tres</p>
 		</div>
 		<div id="container-calculator">
-			<div class="block-non-number">*</div>
-			<div class="block-non-number">/</div>
-			<div class="block-non-number">-</div>
-			<div class="block-non-number">+</div>
-			<div class="block-non-number">.</div>
-			<div class="block-number">9</div>
-			<div class="block-number">8</div>
-			<div class="block-number">7</div>
-			<div class="block-number">6</div>
-			<div class="block-number">5</div>
-			<div class="block-number">4</div>
-			<div class="block-number">3</div>
-			<div class="block-number">2</div>
-			<div class="block-number">1</div>
+			<div onclick="set_Value(this)" class="block-non-number">*</div>
+			<div onclick="set_Value(this)" class="block-non-number">/</div>
+			<div onclick="set_Value(this)" class="block-non-number">-</div>
+			<div onclick="set_Value(this)" class="block-non-number">+</div>
+			<div onclick="set_Value(this)" class="block-non-number">.</div>
+			<div onclick="set_Value(this)" class="block-number">9</div>
+			<div onclick="set_Value(this)" class="block-number">8</div>
+			<div onclick="set_Value(this)" class="block-number">7</div>
+			<div onclick="set_Value(this)" class="block-number">6</div>
+			<div onclick="set_Value(this)" class="block-number">5</div>
+			<div onclick="set_Value(this)" class="block-number">4</div>
+			<div onclick="set_Value(this)" class="block-number">3</div>
+			<div onclick="set_Value(this)" class="block-number">2</div>
+			<div onclick="set_Value(this)" class="block-number"><span>1</span></div>
 		</div>
 	</body>
 	<script>
 		//lanjut project no 10 di https://jsbeginners.com/javascript-projects-for-beginners/
-		var tesData = document.get
-		lanjut ngetes engken carane nyemak data paling efisien uli elemen di dokumen ketika di click
+
+		var fNumber = "", sNumber = "", operator = "";
+		var shiftNumber = false;
+
+		function set_Value(data){
+			var tes = data.firstChild;
+			console.log(tes.nodeValue);
+			if(!isNaN(parseInt(tes.nodeValue))){
+				if(shiftnumber === true){
+					fNumber += tes.nodeValue;
+					console.log("tes value fNumber: " + fNumber);
+				}else{
+					sNumber += tes.nodeValue;
+					console.log("test second number:" + sNumber);
+				}				
+				console.log("Number");
+			}else{
+				shiftNumber = true;
+				console.log('Not Number');
+			}
+		}
+		
+benerin error
 
 	</script>
 <html>
