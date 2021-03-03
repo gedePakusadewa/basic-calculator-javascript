@@ -98,6 +98,9 @@
 				console.log("Number");
 			}else if(tes.nodeValue === "="){
 				set_resultValue(get_OperationValue(fNumber, sNumber, operator));
+			}else if(tes.nodeValue === "C"){
+				set_resultValue("0");
+				set_resetGlobalValue();
 			}else{
 				shiftNumber = true;
 				operator = tes.nodeValue;
@@ -120,6 +123,9 @@
 				case "+":
 					finalValue = parseInt(number1) + parseInt(number2);
 					break;
+				default:
+					finalValue = "Something wrong, please repeat the process corectly";
+					break;
 			}
 			return finalValue;
 			//console.log("final result " + finalValue);
@@ -129,7 +135,12 @@
 			document.getElementById("result-calculator").innerHTML = result;
 		}
 
-		lanjut test ada celah sederhana sink
+		function set_resetGlobalValue(){
+			fNumber = "";
+			sNumber = "";
+			operator = "";
+			shiftNumber = false;
+		}
 
 	</script>
 <html>
